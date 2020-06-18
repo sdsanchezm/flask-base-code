@@ -6,3 +6,6 @@ You can even [clone it, and see what I'm doing](http://github.com/sdsanchezm/fla
 
 ![Just a Logo](/img/logo.png)
 Format: ![Alt Text](url)
+
+---
+Read more about Markdown at [Mastering Markdown Github page](https://guides.github.com/features/mastering-markdown/)
