@@ -7,5 +7,26 @@ You can even [clone it, and see what I'm doing](http://github.com/sdsanchezm/fla
 ![Just a Logo](/img/logo.png)
 Format: ![Alt Text](url)
 
+
+### Instructions tu run the application:
+Taken from:[the flask quick start site](https://flask.palletsprojects.com/en/1.1.x/quickstart/#quickstart)
+
+Create a new virtualenv called env1:
+$ virtualenv env1
+
+Activate your virtual env (inside the Script folder):
+$ source ./activate 
+
+Install flask:
+$ pip3 install flask
+
+Export the environmental variable in order to run flask (using the python we server):
+$ export FLASK_APP=app.py
+
+Run flask:
+$ run flask
+
+
+
 ---
 Read more about Markdown at [Mastering Markdown Github page](https://guides.github.com/features/mastering-markdown/)
