@@ -5,38 +5,64 @@
 {% endblock %}
 
 {% block body %}
-<div class="content">
-    <h1>Task Manager</h1>
-    {% if tasks|length < 1 %}
-        <h4>no task yet... Please add a new one</h4>
-    {% else %}
-    <table class="pure-table">
-        <tr>
-            <th>Task</th>
-            <th>Added</th>
-            <th>Actions</th>
-        </tr>
-        {% for task in tasks %}
-        <tr>
-            <td>{{ task.content }}</td>
-            <td>{{ task.date_created.date() }}</td>
-            <td>
-                <a href="/delete/{{task.id}}">Delete</a>
-                <br>
-                <a href="/update/{{task.id}}">Update</a>
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
-    {% endif %}
-    <form action="/" method="POST" class="pure-form pure-form-aligned">
-        <fieldset>
-            <div class="pure-control-group">
-                <label for="aligned-name">Add Task</label>
-                <input type="text" name="content" id="content" /> 
-                <input type="submit" value="Add Task" />
+
+<div id="layout">
+    
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="#">flask-test</a>
+
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
+
+                    <li class="pure-menu-item menu-item-divided pure-menu-selected">
+                        <a href="#" class="pure-menu-link">About</a>
+                    </li>
+                </ul>
             </div>
-        </fieldset>
-    </form>
+        </div>
+    <div id="main">
+        <div class="content pure-u-1 pure-u-md-3-4">
+            <h1>Task Manager</h1>
+            {% if tasks|length < 1 %}
+                <h4>no task yet... Please add a new one</h4>
+            {% else %}
+            <table class="pure-table">
+                <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Added</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{ task.content }}</td>
+                    <td>{{ task.date_created.date() }}</td>
+                    <td>
+                        <a href="/delete/{{task.id}}">Delete</a>
+                        <br>
+                        <a href="/update/{{task.id}}">Update</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+            <form action="/" method="POST" class="pure-form pure-form-aligned">
+                <fieldset>
+                    <div class="pure-control-group">
+                        <label for="aligned-name">Add Task</label>
+                        <input type="text" name="content" id="content" /> 
+                        <button type="submit" class="pure-button pure-button-primary">Add Task</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </div>
 {% endblock %}

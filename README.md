@@ -26,6 +26,9 @@ $ export FLASK_APP=app.py
 Run flask:
 $ run flask
 
+Or could use python as well:
+$ python.exe app.py #this is in windows, in linux should be python app.py, it shall open in localhost:5000
+
 
 
 ---
