@@ -29,6 +29,34 @@ $ flask run
 Or could use python directly as well to the app.py file:
 $ python.exe app.py #this is in windows, in linux should be python app.py, it shall open in localhost:5000
 
+To create the database:
+1. install all required dependencies
+2. open python
+3. import the model (the name is db in this case):
+```python
+>> from app import db
+```
+4. create all the tables:
+```python
+>> db.create_all()
+```
+
+
+Get all dependencies:
+```python
+(env1) $ freeze > requirements.davs
+```
+
+Result:
+click==7.1.2
+Flask==1.1.2
+Flask-SQLAlchemy==2.4.4
+itsdangerous==1.1.0
+Jinja2==2.11.2
+jsonify==0.5
+MarkupSafe==1.1.1
+SQLAlchemy==1.3.18
+Werkzeug==1.0.1
 
 
 ---
