@@ -20,13 +20,13 @@ $ source ./activate
 Install flask:
 $ pip3 install flask
 
-Export the environmental variable in order to run flask (using the python we server):
+Export the environmental variable in order to run flask (using the python web server):
 $ export FLASK_APP=app.py
 
 Run flask:
-$ run flask
+$ flask run
 
-Or could use python as well:
+Or could use python directly as well to the app.py file:
 $ python.exe app.py #this is in windows, in linux should be python app.py, it shall open in localhost:5000
 
 
