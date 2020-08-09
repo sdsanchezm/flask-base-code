@@ -6,6 +6,12 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
+'''
+To run de database:
+$ python
+>> from app import db
+>> db.create_all()
+'''
 class Todo(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	content = db.Column(db.String(200), nullable=False)
