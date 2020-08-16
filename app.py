@@ -128,6 +128,8 @@ def logout():
     logout_user()
     return redirect(url_for('register.html'))
 
+# login documentation:
+# https://flask-login.readthedocs.io/en/latest/#how-it-works
 
 if __name__ == "__main__":
 	app.run(debug=True)
