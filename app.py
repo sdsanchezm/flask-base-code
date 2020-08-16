@@ -15,6 +15,7 @@ $ python
 class Todo(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	content = db.Column(db.String(200), nullable=False)
+	content2 = db.Column(db.String(200), nullable=False)
 	completed = db.Column(db.Integer, default=0)
 	date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
@@ -30,7 +31,8 @@ def hello_world():
 def index():
 	if request.method == 'POST':
 		task_content = request.form['content']
-		new_task = Todo(content=task_content)
+		task_description = request.form['content2']
+		new_task = Todo(content=task_content, content2=task_description)
 
 		try:
 			db.session.add(new_task)
