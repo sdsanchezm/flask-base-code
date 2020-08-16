@@ -69,5 +69,13 @@ SQLAlchemy==1.3.18
 Werkzeug==1.0.1
 
 
+
+---
+## Flask documentation:
+1. https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/ 
+
 ---
 Read more about Markdown at [Mastering Markdown Github page](https://guides.github.com/features/mastering-markdown/)
+From:
+Z1RJmh_OqeA
+J5bIPtEbS0Q
