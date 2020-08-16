@@ -53,7 +53,7 @@ class Todo(db.Model):
 '''
 @app.route('/', methods=['POST','GET'])
 def hello_world():
-	return render_template('index.html')
+	return render_template('index.html') 
 '''
 @app.route('/', methods=['POST','GET'])
 @login_required
